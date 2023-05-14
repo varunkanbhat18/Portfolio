@@ -290,6 +290,7 @@ article.active {
   position: relative;
   background: var(--border-gradient-onyx);
   padding: 15px;
+  padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   cursor: pointer;
@@ -297,6 +298,25 @@ article.active {
 }
 
 .content-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.content-card-resume {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.content-card-resume::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1455,6 +1475,10 @@ textarea.form-input::-webkit-resizer {
   .content-card {
     padding: 30px;
     padding-top: 25px;
+  }
+
+  .content-card-resume {
+    padding: 25px;
   }
 
   .testimonials-avatar-box {
